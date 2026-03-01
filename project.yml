@@ -1,0 +1,40 @@
+name: ClaudeUsage
+options:
+  bundleIdPrefix: com.user
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "15.0"
+  createIntermediateGroups: true
+
+targets:
+  ClaudeUsage:
+    type: application
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - Sources
+    settings:
+      base:
+        PRODUCT_NAME: ClaudeUsage
+        PRODUCT_BUNDLE_IDENTIFIER: com.user.ClaudeUsage
+        SWIFT_VERSION: "5.9"
+        MACOSX_DEPLOYMENT_TARGET: "13.0"
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGNING_REQUIRED: "NO"
+        CODE_SIGNING_ALLOWED: "YES"
+        INFOPLIST_FILE: Sources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Sources/ClaudeUsage.entitlements
+        ENABLE_HARDENED_RUNTIME: "NO"
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleName: ClaudeUsage
+        CFBundleDisplayName: Claude Usage
+        CFBundleIdentifier: com.user.ClaudeUsage
+        CFBundleVersion: "1"
+        CFBundleShortVersionString: "1.0"
+        NSPrincipalClass: NSApplication
+        NSHighResolutionCapable: true
+        LSUIElement: true
+        LSMinimumSystemVersion: "13.0"
